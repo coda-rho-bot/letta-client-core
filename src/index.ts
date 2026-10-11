@@ -15,3 +15,8 @@ export * from "./echoMerge.js";
 export * from "./grouping.js";
 export * from "./transcriptProjection.js";
 export * from "./terminal.js";
+export * from "./auth/oauthTokens.js";
+export * from "./auth/oauthResult.js";
+export * from "./storage/KeyValueStore.js";
+export * from "./env/selector.js";
+export * from "./env/conversationEnv.js";
