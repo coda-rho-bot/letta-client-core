@@ -1,0 +1,17 @@
+{
+  "name": "@angus/letta-client-core",
+  "version": "0.1.0",
+  "description": "Shared client core for Angus Software Letta clients — transcript projection, echo merge, terminal doctrine, tool text. One implementation, two shells (Agents Chat Android + OSS-UI desktop).",
+  "license": "Apache-2.0",
+  "type": "module",
+  "exports": {
+    ".": "./src/index.ts"
+  },
+  "dependencies": {
+    "@letta-ai/letta-agent-sdk": "0.8.39"
+  },
+  "devDependencies": {
+    "bun-types": "latest",
+    "typescript": "~6.0.3"
+  }
+}
