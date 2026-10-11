@@ -26,7 +26,13 @@ interface TokenResponseBody {
 export class OAuthTokenError extends Error {}
 
 export function getOAuthClientId(): string | null {
-  return process.env.EXPO_PUBLIC_LETTA_OAUTH_CLIENT_ID?.trim() || LETTA_MOBILE_OAUTH_CLIENT_ID;
+  // Neutral name first (desktop + any non-expo consumer); the expo-flavored
+  // variable remains the fallback so existing Android builds keep working.
+  return (
+    process.env.LETTA_OAUTH_CLIENT_ID?.trim() ||
+    process.env.EXPO_PUBLIC_LETTA_OAUTH_CLIENT_ID?.trim() ||
+    LETTA_MOBILE_OAUTH_CLIENT_ID
+  );
 }
 
 function tokenError(body: TokenResponseBody): OAuthTokenError {
