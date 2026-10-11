@@ -25,7 +25,7 @@
  * covered by the store are expected to be filtered out by the caller —
  * retirement by uuid, mirroring echo retirement by otid.)
  */
-import type { TranscriptItem } from "./model";
+import type { TranscriptItem } from "./model.js";
 
 /** An app-only row (echo, error) plus its placement anchor. */
 export interface EchoEntry {
