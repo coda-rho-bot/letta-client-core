@@ -18,5 +18,11 @@
 ## Doctrine
 Vendored/extracted copies pin the source COMMIT, not just the repo (Oct 10 2026 lesson — the theming drift). When re-syncing from agents-chat, update this file with the new commit.
 
+## Tier 3 (Oct 11, third pass — desktop-first extraction)
+- **Source repo:** coda/letta-oss-ui (Forgejo), commit `07de779` (Oct 11 2026 — main after the theming-tokens pane PR #13; the attachments pane is PR #11's lineage, the computers projection is PR #12's).
+- **src/attachments.ts**: the platform-PURE intake policy — limits (MAX_EDGE 1600, JPEG_QUALITY 0.8 canonical 0–1, MAX_SOURCE_BYTES 25MB, MAX_ATTACHMENTS 4), the downscale math (`downscaleDimensions`), the size-guard decision (`overSourceLimit`), the batch cap policy (`intakeBatch`, adapter-threaded over the shell's decode), and the wire projections (`toImageContent`, `wireContent`). The desktop's decode (Electron nativeImage) and Android's (expo-image-manipulator) stay shell-side. The desktop's JPEG_QUALITY was 80 on Electron's 0–100 scale; the core carries the canonical 0.8 and the desktop shell converts.
+- **src/env/computers.ts**: `ComputerSummary` + `toComputerSummary` verbatim from the desktop env pane (shape and provenance from the Android pane, agents-chat api.ts listComputers).
+- **Tests:** test/attachments.test.ts + test/env/computers.test.ts mirror the app's coverage (tests/electron/attachments.test.ts decisions + the projection test in tests/electron/env.test.ts). The Electron nativeImage decode tests stay app-side — they exercise the shell, not the core.
+
 ## Sync path
 Upstream of these modules is the Android app (battle-tested first). Changes flow: agents-chat → core (extraction) → desktop consumption. Eventually inverts once both shells consume the package.

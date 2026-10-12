@@ -8,6 +8,8 @@
  *
  * Modules are platform-pure: SDK types in, plain data out. No RN, no expo,
  * no DOM — safe in bun/node tests, Metro, and Electron alike.
+ * Later extraction tiers have other source repos — the ledger of what came
+ * from where, pinned per commit, is PROVENANCE.md.
  */
 export * from "./model.js";
 export * from "./toolText.js";
@@ -20,3 +22,5 @@ export * from "./auth/oauthResult.js";
 export * from "./storage/KeyValueStore.js";
 export * from "./env/selector.js";
 export * from "./env/conversationEnv.js";
+export * from "./env/computers.js";
+export * from "./attachments.js";
