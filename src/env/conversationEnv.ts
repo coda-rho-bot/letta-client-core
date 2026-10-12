@@ -13,8 +13,8 @@
  *   - null     → explicitly Cloud Sandbox (overrides a profile default)
  *   - selector → a specific computer
  */
-import type { KeyValueStore } from "../storage/KeyValueStore.js";
-import type { ComputerSelectorField } from "./selector.js";
+import type { KeyValueStore } from "../storage/KeyValueStore";
+import type { ComputerSelectorField } from "./selector";
 
 const KEY = (conversationId: string) => `letta.env.${conversationId}`;
 

@@ -11,16 +11,16 @@
  * Later extraction tiers have other source repos — the ledger of what came
  * from where, pinned per commit, is PROVENANCE.md.
  */
-export * from "./model.js";
-export * from "./toolText.js";
-export * from "./echoMerge.js";
-export * from "./grouping.js";
-export * from "./transcriptProjection.js";
-export * from "./terminal.js";
-export * from "./auth/oauthTokens.js";
-export * from "./auth/oauthResult.js";
-export * from "./storage/KeyValueStore.js";
-export * from "./env/selector.js";
-export * from "./env/conversationEnv.js";
-export * from "./env/computers.js";
-export * from "./attachments.js";
+export * from "./model";
+export * from "./toolText";
+export * from "./echoMerge";
+export * from "./grouping";
+export * from "./transcriptProjection";
+export * from "./terminal";
+export * from "./auth/oauthTokens";
+export * from "./auth/oauthResult";
+export * from "./storage/KeyValueStore";
+export * from "./env/selector";
+export * from "./env/conversationEnv";
+export * from "./env/computers";
+export * from "./attachments";

@@ -6,7 +6,7 @@
  * into one summary row (as paseo, remodex and litter all do); the live call
  * stays standalone so a running turn keeps showing what it is doing.
  */
-import type { ToolItem, TranscriptItem } from "./model.js";
+import type { ToolItem, TranscriptItem } from "./model";
 
 /** Summary row standing in for a run of collapsed tool calls. */
 export interface ToolGroupItem {

@@ -9,8 +9,8 @@
  */
 import type { TranscriptRow } from "@letta-ai/letta-agent-sdk/client";
 
-import type { ToolStatus, TranscriptItem } from "./model.js";
-import { cleanUserText, formatToolInput, summarizeToolInput } from "./toolText.js";
+import type { ToolStatus, TranscriptItem } from "./model";
+import { cleanUserText, formatToolInput, summarizeToolInput } from "./toolText";
 
 export interface ProjectionState {
   /** Row currently being written by an in-flight turn, if any. */
